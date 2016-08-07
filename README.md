@@ -6,6 +6,8 @@ If you want to suport my work, to continue this, you can make a donation.
 skin.CarPC-touch_carbon
 =======================
 
+readme test
+
 skin_xbmc
 Update 2.09.2015
 - Fixed file manager and add button in home.
