@@ -12,12 +12,45 @@
             <height>ScreenHeight</height>
             <visible>Player.HasVideo</visible>
         </control>
-        
-        <include>CommonTopBar</include>
-        <include>XbmcLogo</include>
-        <include>Time</include>
-        <include>Weather</include>
-        <include>Logob</include>
+
+
+<include>CommonTopBar</include>
+
+
+<control type="group">
+    <include>Window_OpenClose_Animation_Zoom</include>
+    <posx>5</posx>
+    <posy>2</posy>
+    <control type="button">
+        <description>Reload</description>
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>60</width>
+        <height>60</height>
+        <texturenofocus>special://skin/media/icons/reloadskin_icon.png</texturenofocus>
+        <texturefocus border="5">special://skin/media/icons/reloadskin_icon.png</texturefocus>
+        <onfocus> ReloadSkin()</onfocus> <!-- display_hell.png RunScript("special://skin/scripts/brightness.py") -->
+    </control>
+</control>
+
+   <control type="group">
+       <include>Window_OpenClose_Animation_Zoom</include>
+       <posx>85r</posx>
+       <posy>2</posy>
+       <control type="button">
+           <description>Navigacios gomb</description>
+           <posx>0</posx>
+           <posy>0</posy>
+           <width>80</width>
+           <height>80</height>
+           <texturenofocus>navit_logo2.png</texturenofocus>
+           <texturefocus border="5">navit_logo2.png</texturefocus>
+           <onfocus>Quit</onfocus> <!-- ReloadSkin() TakeScreenshot("/tmp/screen1.png") -->
+       </control>
+   </control>
+   
+        <!-- istvan  include>XbmcLogo</include-->
+         <include>Logob</include>
         
         
         

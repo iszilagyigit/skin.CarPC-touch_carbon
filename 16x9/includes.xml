@@ -85,91 +85,6 @@
         </control>
     </include>
 
-    
-    <!-- weather Info -->
-    <include name="Weather">
-        <control type="group">
-            <include>Window_OpenClose_Animation_Slide_Down</include>
-            <visible>[!IsEmpty(Weather.Plugin) + Weather.IsFetched] + !Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonWeather)</visible>
-            <include>VisibleFadeEffect</include>
-            <posx>712</posx>
-            <posy>1</posy>
-            <width>200</width>
-            <height>67</height>
-            <control type="button">
-                <description>Goto Weather button</description>
-                <posx>300</posx>
-                <posy>7</posy>
-                <width>300</width>
-                <height>67</height>
-                <texturenofocus>-</texturenofocus>
-                <texturefocus>-</texturefocus>
-                <onclick>ActivateWindow(Weather)</onclick>
-            </control>
-            <control type="image">
-                <description>Weather image</description>
-                <posx>474</posx>
-                <posy>0</posy>
-                <width>67</width>
-                <height>67</height>
-                <align>right</align>
-                <aspectratio>keep</aspectratio>
-                <texture background="true">$INFO[Weather.Conditions]</texture>
-            </control>
-            <control type="label">
-                <description>location label</description>
-                <posx>450</posx>
-                <posy>4</posy>
-                <height>37</height>
-                <width>450</width>
-                <label>[B]$INFO[Window(Weather).Property(Location)][/B]</label>
-                <align>right</align>
-                <aligny>center</aligny>
-                <font>font13_title</font>
-                <shadowcolor>black</shadowcolor>
-            </control>
-            <control type="grouplist">
-                <posx>0</posx>
-                <posy>45</posy>
-                <width>450</width>
-                <height>26</height>
-                <orientation>horizontal</orientation>
-                <align>right</align>
-                <itemgap>0</itemgap>
-                <control type="label">
-                    <description>Weather label</description>
-                    <height>22</height>
-                    <width max="400">auto</width>
-                    <label>$INFO[Window(Weather).Property(Current.Condition)] </label>
-                    <font>font13_title</font>
-                    <aligny>center</aligny>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Temp Label</description>
-                    <height>22</height>
-                    <width max="400">auto</width>
-                    <label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
-                    <aligny>center</aligny>
-                    <font>font13_title</font>
-                    <shadowcolor>black</shadowcolor>
-                </control>
-                <control type="label">
-                    <description>Temp Units Label</description>
-                    <posy>2</posy>
-                    <height>15</height>
-                    <width max="200">auto</width>
-                    <label>$INFO[System.TemperatureUnits]</label>
-                    <font>font13_title</font>
-                    <aligny>center</aligny>
-                    <shadowcolor>black</shadowcolor>
-                    <visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
-                </control>
-            </control>
-        </control>
-    </include>
-    
     <include name="CommonTopBar">
         <control type="image">
             <include>Window_OpenClose_Animation_Slide_Down</include>
@@ -272,7 +187,7 @@
             </control>
         </control>
     </include>
-    
+   
     <include name="Logob">
         <control type="image">
             <description>Normal Default Logo Image</description>
@@ -281,7 +196,7 @@
             <width>419</width>
             <height>419</height>
             <aspectratio></aspectratio>
-            <texture>logo_b.png</texture>
+            <texture>special://skin/media/icons/vw.png</texture>
             <visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonLogob)</visible>
             <include>Window_OpenClose_Animation_Zoom</include>
         </control>
