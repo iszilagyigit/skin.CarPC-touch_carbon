@@ -52,39 +52,6 @@
         </control>
     </include>
     
-    
-    <include name="Time">
-        <control type="group">
-            <visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonTime)</visible>
-            <control type="image">
-                <include>Window_OpenClose_Animation_Slide_Down</include>
-                <include>VisibleFadeEffect</include>
-                <posx>450</posx>
-                <posy>0</posy>
-                <width>375</width>
-                <height>75</height>
-                <aligny>center</aligny>
-                <align>center</align>
-                <texture>ceas.png</texture>
-            </control>
-            <control type="label">
-                <include>Window_OpenClose_Animation_Slide_Down</include>
-                <description>time label</description>
-                <posx>250</posx>
-                <posy>0</posy>
-                <width>350</width>
-                <height>67</height>
-                <aligny>center</aligny>
-                <align>center</align>
-                <font>font50_title</font>
-                <textcolor>white</textcolor>
-                <label>$INFO[System.Time]</label>
-                <include>VisibleFadeEffect</include>
-                <include>16x9_xPos_Relocation</include>
-            </control>
-        </control>
-    </include>
-
     <include name="CommonTopBar">
         <control type="image">
             <include>Window_OpenClose_Animation_Slide_Down</include>
@@ -124,7 +91,7 @@
                 <height>130</height>
                 <texturenofocus >home_2.png</texturenofocus>
                 <texturefocus border="5">home_2_p.png</texturefocus>
-                <onclick>RunScript("plugin.program.navigation")</onclick>
+                <onfocus>Quit()</onfocus> <!-- RunScript("plugin.program.navigation") -->
             </control>
             <control type="image">
                 <description>Navit Button Image</description>
@@ -164,7 +131,7 @@
                 <height>130</height>
                 <texturenofocus >home_2.png</texturenofocus>
                 <texturefocus border="5">home_2_p.png</texturefocus>
-                <onclick>ActivateWindow(Pictures)</onclick>
+                <onfocus>ActivateWindow(Pictures)</onfocus>
             </control>
             <control type="image">
                 <description>Pictures Button Image</description>
@@ -187,7 +154,8 @@
             </control>
         </control>
     </include>
-   
+
+<!--
     <include name="Logob">
         <control type="image">
             <description>Normal Default Logo Image</description>
@@ -201,7 +169,7 @@
             <include>Window_OpenClose_Animation_Zoom</include>
         </control>
     </include>
-    
+-->
     <include name="Radio">
         <control type="group" id="4230">
             <visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonRadio) + !Control.IsVisible(4240)</visible>
@@ -219,7 +187,7 @@
                 <height>130</height>
                 <texturenofocus >home_3.png</texturenofocus>
                 <texturefocus border="5">home_3_p.png</texturefocus>
-                <onclick>RunScript("plugin.program.radioFM")</onclick>
+                <onfocus>RunScript("plugin.program.radioFM")</onfocus>
             </control>
             <control type="image">
                 <description>Radio</description>
@@ -261,7 +229,7 @@
                 <height>130</height>
                 <texturenofocus >home_3.png</texturenofocus>
                 <texturefocus border="5">home_3_p.png</texturefocus>
-                <onclick>ActivateWindow(Favourites)</onclick>
+                <onfocus>ActivateWindow(Favourites)</onfocus>
             </control>
             <control type="image">
                 <description>Favourites</description>
@@ -820,7 +788,7 @@
                 <font>-</font>
                 <texturenofocus border="5">floor_button_t.png</texturenofocus>
                 <texturefocus border="5">floor_buttonFO.png</texturefocus>
-                <onclick>ActivateWindow(Home)</onclick>
+                <onfocus>ActivateWindow(Home)</onfocus>
             </control>
             <control type="image">
                 <description>Home Button Image</description>
@@ -957,7 +925,7 @@
                     <height>70</height>
                     <texturenofocus></texturenofocus>
                     <texturefocus>button-focus2.png</texturefocus>
-                    <onclick>ActivateWindow(Music)</onclick>
+                    <onfocus>ActivateWindow(Music)</onfocus>
                 </control>
                 <control type="image">
                     <posx>0</posx>
@@ -974,7 +942,7 @@
                     <height>70</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>button-focus2.png</texturefocus>
-                    <onclick>ActivateWindow(Videos)</onclick>
+                    <onfocus>ActivateWindow(Videos)</onfocus>
                 </control>
                 <control type="image">
                     <posx>0</posx>
@@ -991,7 +959,7 @@
                     <height>70</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>button-focus2.png</texturefocus>
-                    <onclick>ActivateWindow(Pictures)</onclick>
+                    <onfocus>ActivateWindow(Pictures)</onfocus>
                 </control>
                 <control type="image">
                     <posx>0</posx>
@@ -1008,7 +976,7 @@
                     <height>70</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>button-focus2.png</texturefocus>
-                    <onclick>RunScript("plugin.program.radioFM")</onclick>
+                    <onfocus>RunScript("plugin.program.radioFM")</onfocus>
                 </control>
                 <control type="image">
                     <posx>0</posx>
@@ -1025,7 +993,7 @@
                     <height>70</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>button-focus2.png</texturefocus>
-                    <onclick>RunScript("plugin.program.navigation")</onclick>
+                    <onfocus>RunScript("plugin.program.navigation")</onfocus>
                 </control>
                 <control type="image">
                     <posx>0</posx>
@@ -1042,7 +1010,7 @@
                     <height>70</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>button-focus2.png</texturefocus>
-                    <onclick>ActivateWindow(Programs)</onclick>
+                    <onfocus>ActivateWindow(Programs)</onfocus>
                 </control>
                 <control type="image">
                     <posx>0</posx>

@@ -1,5 +1,5 @@
 <window id="0">
-    <onload>RunScript("special://skin/scripts/check_calibration.py")</onload>
+    <!--onload>RunScript("special://skin/scripts/check_calibration.py")</onload-->
     <!--<onunload condition="Container(9000).Hasfocus(2) | Container(9000).Hasfocus(3) | ControlGroup(9010).HasFocus">SetProperty(VideosDirectLink,True)</onunload>
     <onunload condition="Control.HasFocus(9000) + Container(9000).Hasfocus(1)">ClearProperty(VideosDirectLink)</onunload>-->
     <defaultcontrol always="true">4250</defaultcontrol>
@@ -29,7 +29,7 @@
         <height>60</height>
         <texturenofocus>special://skin/media/icons/reloadskin_icon.png</texturenofocus>
         <texturefocus border="5">special://skin/media/icons/reloadskin_icon.png</texturefocus>
-        <onfocus> ReloadSkin()</onfocus> <!-- display_hell.png RunScript("special://skin/scripts/brightness.py") -->
+        <onfocus>ReloadSkin()</onfocus>
     </control>
 </control>
 
@@ -49,8 +49,8 @@
        </control>
    </control>
    
-        <!-- istvan  include>XbmcLogo</include-->
-         <include>Logob</include>
+        <!-- istvan  include>XbmcLogo</include>
+         <include>Logob</include-->
         
         
         
@@ -71,7 +71,7 @@
                 <height>130</height>
                 <texturenofocus>home_1.png</texturenofocus>
                 <texturefocus border="5">home_1_p.png</texturefocus>
-                <onclick>ActivateWindow(Videos)</onclick>
+                <onfocus>ActivateWindow(Videos)</onfocus>
             </control>
             
             <control type="image">
@@ -109,11 +109,11 @@
             <width>400</width>
             <height>400</height>
             <aspectratio></aspectratio>
-            <texture>logo.png</texture>
-            <visible>![Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))]</visible>
+            <texture>special://skin/media/vw.png</texture>
+            <!--visible>![Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))]</visible-->
             <include>Window_OpenClose_Animation_Zoom</include>
         </control>
-        <control type="image">
+        <!--control type="image">
             <description>User Set Logo Image</description>
             <posx>440</posx>
             <posy>147</posy>
@@ -123,7 +123,7 @@
             <texture>$INFO[Skin.String(CustomLogoPath)]</texture>
             <visible>Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))</visible>
             <include>Window_OpenClose_Animation_Zoom</include>
-        </control>
+        </control-->
         
         
         <control type="group" id="4250">
@@ -132,9 +132,6 @@
             <posy>135</posy>
             <include>VisibleFadeEffect</include>
             <control type="button" id="4251">
-                <onup>Control.SetFocus(4241)</onup>
-                <ondown>Control.SetFocus(4261)</ondown>
-                <onleft>Control.SetFocus(4201)</onleft>
                 <description>Music Button</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -184,7 +181,7 @@
                 <font>-</font>
                 <texturenofocus >home_5.png</texturenofocus>
                 <texturefocus border="5">home_5_p.png</texturefocus>
-                <onclick>ActivateWindow(Programs)</onclick>
+                <onfocus>ActivateWindow(Programs)</onfocus>
             </control>
             <control type="image">
                 <description>Programs Button Image</description>
@@ -320,7 +317,7 @@
             </control>
         </control>
         <include>FileManager</include>
-        <include>Connect3g</include>
+        <!--include>Connect3g</include -->
         <include>BehindDialogFadeOut</include>
     </controls>	
 </window>
