@@ -549,6 +549,7 @@
                 <font>-</font>
                 <texturefocus>OSDPrevTrackFO.png</texturefocus>
                 <texturenofocus>OSDPrevTrackNF.png</texturenofocus>
+		<onfocus>PlayerControl(Previous)</onfocus>
             </control>
             <control type="togglebutton" id="602">
                 <posx>90</posx>
@@ -896,7 +897,7 @@
                     <height>70</height>
                     <texturenofocus></texturenofocus>
                     <texturefocus>button-focus2.png</texturefocus>
-                    <onfocus>ActivateWindow(Music)</onfocus>
+                    <onfocus>ActivateWindow(Music,"music")</onfocus>
                 </control>
                 <control type="image">
                     <posx>0</posx>
@@ -947,7 +948,7 @@
                     <height>70</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>button-focus2.png</texturefocus>
-                    <onfocus>RunScript("plugin.program.radioFM")</onfocus>
+                    <onfocus>ActivateWindow(Music,"radio")</onfocus>
                 </control>
                 <control type="image">
                     <posx>0</posx>
@@ -964,7 +965,7 @@
                     <height>70</height>
                     <texturenofocus>-</texturenofocus>
                     <texturefocus>button-focus2.png</texturefocus>
-                    <onfocus>RunScript("plugin.program.navigation")</onfocus>
+                    <onfocus>Quit()</onfocus>
                 </control>
                 <control type="image">
                     <posx>0</posx>

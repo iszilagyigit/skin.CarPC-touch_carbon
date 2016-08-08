@@ -133,7 +133,7 @@
                 <font>-</font>
                 <texturenofocus >home_4.png</texturenofocus>
                 <texturefocus border="5">home_4_p.png</texturefocus>
-                <onfocus>ActivateWindow(Music)</onfocus>
+                <onclick>ActivateWindow(Music,"music")</onclick>
             </control>
             <control type="image">
                 <description>Music Button Image</description>
