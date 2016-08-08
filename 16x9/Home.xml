@@ -12,10 +12,7 @@
             <height>ScreenHeight</height>
             <visible>Player.HasVideo</visible>
         </control>
-
-
 <include>CommonTopBar</include>
-
 
 <control type="group">
     <include>Window_OpenClose_Animation_Zoom</include>
@@ -49,7 +46,7 @@
        </control>
    </control>
    
-        <!-- istvan  include>XbmcLogo</include>
+        <!-- istvansz   include>XbmcLogo</include>
          <include>Logob</include-->
         
         
@@ -60,10 +57,6 @@
             <posx>20</posx>
             <posy>135</posy>
             <control type="button" id="4201">
-                <ondown>Control.SetFocus(4211)</ondown>
-                <onup>Control.SetFocus(600)</onup>
-                <onleft>Control.SetFocus()</onleft>
-				<onright>Control.SetFocus(4251)</onright>
                 <description>Video Button</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -125,7 +118,7 @@
             <include>Window_OpenClose_Animation_Zoom</include>
         </control-->
         
-        
+         
         <control type="group" id="4250">
             <include>Window_OpenClose_Animation_Zoom</include>
             <posx>560r</posx>
@@ -140,7 +133,7 @@
                 <font>-</font>
                 <texturenofocus >home_4.png</texturenofocus>
                 <texturefocus border="5">home_4_p.png</texturefocus>
-                <onclick>ActivateWindow(Music)</onclick>
+                <onfocus>ActivateWindow(Music)</onfocus>
             </control>
             <control type="image">
                 <description>Music Button Image</description>
@@ -170,9 +163,6 @@
             <posy>280</posy>
             <include>VisibleFadeEffect</include>
             <control type="button" id="4261">
-                <onup>Control.SetFocus(4251)</onup>
-                <ondown>Control.SetFocus(4271)</ondown>
-                <onleft>Control.SetFocus(4211)</onleft>
                 <description>Programs Button</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -211,10 +201,6 @@
             <posy>430</posy>
             <include>VisibleFadeEffect</include>
             <control type="button" id="4271">
-                <onup>Control.SetFocus(4261)</onup>
-                <ondown>Control.SetFocus(4281)</ondown>
-                <onleft>Control.SetFocus(4241)</onleft>
-				<onright></onright>
                 <description>Shutdown Button</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -264,10 +250,6 @@
             <posx>95r</posx>
             <posy>85r</posy>
             <control type="button" id="4281">
-                <ondown>Control.SetFocus(4291)</ondown>
-                <onup>Control.SetFocus(4271)</onup>
-                <onleft>Control.SetFocus(4291)</onleft>
-				<onright></onright>
                 <description>Settings Button</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -293,10 +275,6 @@
             <posx>190r</posx>
             <posy>85r</posy>
             <control type="button" id="4291">
-                <ondown>Control.SetFocus(4296)</ondown>
-                <onup>Control.SetFocus(4281)</onup>
-                <onleft>Control.SetFocus(4296)</onleft>
-				<onright>Control.SetFocus(4281)</onright>
                 <description>Settings Button</description>
                 <posx>0</posx>
                 <posy>0</posy>
