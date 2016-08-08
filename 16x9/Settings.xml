@@ -396,7 +396,7 @@
 				<font>-</font>
 				<texturenofocus >settings_r.png</texturenofocus>
 				<texturefocus>settings_r_p.png</texturefocus>
-				<onclick>RunScript("plugin.program.carpcupdater")</onclick>
+				<onfocus>RunScript("/home/pi/.kodi/addons/skin.CarPC-touch_carbon/update-skin.py")</onfocus>
 			</control>
 			<control type="image">
 				<description>System Update</description>
