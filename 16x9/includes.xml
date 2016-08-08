@@ -788,7 +788,7 @@
                 <font>-</font>
                 <texturenofocus border="5">floor_button.png</texturenofocus>
                 <texturefocus border="5">floor_buttonFO.png</texturefocus>
-                <onclick>Skin.ToggleSetting(MediaSubMenuVisible)</onclick>
+                <onfocus>Skin.ToggleSetting(MediaSubMenuVisible)</onfocus>
             </control>
             <control type="image">
                 <description>Options Button Image</description>
@@ -826,11 +826,13 @@
             <include>Window_OpenClose_Animation_Slide_Up</include>
             <include>SubMenuCommonLayout</include>
             <content>
+<!--
                 <item>
                     <label>1036</label>
                     <onclick>ActivateWindow(1115)</onclick>
                     <icon>arrow-big-up.png</icon>
                 </item>
+-->
                 <item>
                     <label>587</label>
                     <onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
@@ -850,14 +852,32 @@
                     <onclick>Container.NextViewMode</onclick>
                     <icon>icon_view_w.png</icon>
                 </item>
-                
+               <!-- 
                 <item>
                     <label>31200</label>
                     <onclick>ParentDir</onclick>
                     <icon>icon_back_w.png</icon>
                 </item>
-                
+               --> 
             </content>
+        </control>
+        <control type="button">
+            <description>Close Button</description>
+            <posx>280r</posx>
+            <posy>650</posy>
+            <width>80</width>
+            <height>80</height>
+            <font>-</font>
+            <onfocus>Action(ParentDir)</onfocus>
+            <texturefocus></texturefocus>
+            <texturenofocus></texturenofocus>
+        </control>
+        <control type="image">
+            <posx>280r</posx>
+            <posy>650</posy>
+            <width>60</width>
+            <height>60</height>
+            <texture>arrow-big-up.png</texture>
         </control>
     </include>
     
