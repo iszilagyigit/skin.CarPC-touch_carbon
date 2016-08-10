@@ -81,7 +81,7 @@
                 <posy>22</posy>
                 <height>90</height>
                 <width>200</width>
-                <label>Videos</label>
+                <label>Video</label>
                 <aligny>center</aligny>
                 <font>font40_title</font>
                 <textcolor>FFFFFFFF</textcolor>
