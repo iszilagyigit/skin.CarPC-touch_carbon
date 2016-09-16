@@ -82,13 +82,16 @@
             <posy>280</posy>
             <control type="button" id="4211">
                 <description>Navit Button</description>
+                <onup>Control.SetFocus(4201)</onup>
+                <ondown>Control.SetFocus(4241)</ondown>
+                <onright>Control.SetFocus(4261)</onright>
                 <posx>0</posx>
                 <posy>0</posy>
                 <width>408</width>
                 <height>130</height>
                 <texturenofocus >home_2.png</texturenofocus>
                 <texturefocus border="5">home_2_p.png</texturefocus>
-                <onfocus>Quit()</onfocus> <!-- RunScript("plugin.program.navigation") -->
+                <onclick>Quit()</onclick> <!-- RunScript("plugin.program.navigation") -->
             </control>
             <control type="image">
                 <description>Navit Button Image</description>
@@ -119,13 +122,16 @@
             <posy>280</posy>
             <control type="button" id="4221">
                 <description>Pictures Button</description>
+                <onup>Control.SetFocus(4201)</onup>
+                <ondown>Control.SetFocus(4221)</ondown>
+                <onright>Control.SetFocus(4261)</onright>
                 <posx>0</posx>
                 <posy>0</posy>
                 <width>408</width>
                 <height>130</height>
                 <texturenofocus >home_2.png</texturenofocus>
                 <texturefocus border="5">home_2_p.png</texturefocus>
-                <onfocus>ActivateWindow(Pictures)</onfocus>
+                <onclick>ActivateWindow(Pictures)</onclick>
             </control>
             <control type="image">
                 <description>Pictures Button Image</description>
@@ -171,6 +177,9 @@
             <posx>20</posx>
             <posy>430</posy>
             <control type="button" id="4231">
+                <onup>Control.SetFocus(4221)</onup>
+                <ondown>Control.SetFocus(4251)</ondown>
+                <onright>Control.SetFocus(4271)</onright>
                 <description>Radio</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -178,7 +187,7 @@
                 <height>130</height>
                 <texturenofocus >home_3.png</texturenofocus>
                 <texturefocus border="5">home_3_p.png</texturefocus>
-                <onfocus>RunScript("plugin.program.radioFM")</onfocus>
+                <onclick>RunScript("plugin.program.radioFM")</onclick>
             </control>
             <control type="image">
                 <description>Radio</description>
@@ -210,6 +219,9 @@
             <posx>20</posx>
             <posy>430</posy>
             <control type="button" id="4241">
+                <onup>Control.SetFocus(4211)</onup>
+                <ondown>Control.SetFocus(4251)</ondown>
+                <onright>Control.SetFocus(4271)</onright>
                 <description>Favourites</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -217,7 +229,7 @@
                 <height>130</height>
                 <texturenofocus >home_3.png</texturenofocus>
                 <texturefocus border="5">home_3_p.png</texturefocus>
-                <onfocus>ActivateWindow(Favourites)</onfocus>
+                <onclick>ActivateWindow(Favourites)</onclick>
             </control>
             <control type="image">
                 <description>Favourites</description>
@@ -549,7 +561,11 @@
                 <font>-</font>
                 <texturefocus>OSDPrevTrackFO.png</texturefocus>
                 <texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-		<onfocus>PlayerControl(Previous)</onfocus>
+                <onleft></onleft>
+                <onright>Control.SetFocus(602)</onright>
+                <onup>Control.SetFocus(602)</onup>
+                <ondown>Control.SetFocus(4201)</ondown>
+                <onclick>PlayerControl(Previous)</onclick>
             </control>
             <control type="togglebutton" id="602">
                 <posx>90</posx>
@@ -564,7 +580,11 @@
                 <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
                 <alttexturefocus>OSDPlayFO.png</alttexturefocus>
                 <alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-                <onfocus>PlayerControl(Play)</onfocus>
+                <onleft>Control.SetFocus(600)</onleft>
+                <onright>Control.SetFocus(603)</onright>
+                <onup>Control.SetFocus(603)</onup>
+                <ondown>Control.SetFocus(600)</ondown>
+                <onclick>PlayerControl(Play)</onclick>
             </control>
             <control type="button" id="603">
                 <posx>180</posx>
@@ -575,7 +595,11 @@
                 <font>-</font>
                 <texturefocus>OSDStopFO.png</texturefocus>
                 <texturenofocus>OSDStopNF.png</texturenofocus>
-                <onfocus>PlayerControl(Stop)</onfocus>
+                <onleft>Control.SetFocus(602)</onleft>
+                <onright>Control.SetFocus(605)</onright>
+                <onup>Control.SetFocus(605)</onup>
+                <ondown>Control.SetFocus(602)</ondown>
+                <onclick>PlayerControl(Stop)</onclick>
             </control>
             <control type="button" id="605">
                 <posx>270</posx>
@@ -586,7 +610,11 @@
                 <font>-</font>
                 <texturefocus>OSDNextTrackFO.png</texturefocus>
                 <texturenofocus>OSDNextTrackNF.png</texturenofocus>
-                <onfocus>PlayerControl(Next)</onfocus>
+                <onleft>Control.SetFocus(603)</onleft>
+                <onright>Control.SetFocus(4298)</onright>
+                <onup>Control.SetFocus(4298)</onup>
+                <ondown>Control.SetFocus(603)</ondown>
+                <onclick>PlayerControl(Next)</onclick>
             </control>
         </control>
     </include>
@@ -760,7 +788,7 @@
                 <font>-</font>
                 <texturenofocus border="5">floor_button_t.png</texturenofocus>
                 <texturefocus border="5">floor_buttonFO.png</texturefocus>
-                <onfocus>ActivateWindow(Home)</onfocus>
+                <onclick>ActivateWindow(Home)</onclick>
             </control>
             <control type="image">
                 <description>Home Button Image</description>
@@ -788,7 +816,7 @@
                 <font>-</font>
                 <texturenofocus border="5">floor_button.png</texturenofocus>
                 <texturefocus border="5">floor_buttonFO.png</texturefocus>
-                <onfocus>Skin.ToggleSetting(MediaSubMenuVisible)</onfocus>
+                <onclick>Skin.ToggleSetting(MediaSubMenuVisible)</onclick>
             </control>
             <control type="image">
                 <description>Options Button Image</description>
@@ -1371,6 +1399,10 @@
             <posx>285r</posx>
             <posy>85r</posy>
             <control type="button" id="4296">
+                <ondown>Control.SetFocus(4298)</ondown>
+                <onup>Control.SetFocus(4291)</onup>
+                <onleft>Control.SetFocus(4298)</onleft>
+                <onright>Control.SetFocus(4291)</onright>
                 <description>Connect 3g</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -1399,6 +1431,10 @@
             <posx>380r</posx>
             <posy>85r</posy>
             <control type="button" id="4298">
+                <ondown>Control.SetFocus(605)</ondown>
+                <onup>Control.SetFocus(4296)</onup>
+                <onleft>Control.SetFocus(605)</onleft>
+                <onright>Control.SetFocus(4296)</onright>
                 <description>Connect 3g</description>
                 <posx>0</posx>
                 <posy>0</posy>
