@@ -8,6 +8,11 @@
     <include file="IncludesHomeRecentlyAdded.xml" />
     <include file="IncludesKeypad.xml" />
     <include file="IncludesScripts.xml" />
+
+    <include file="ViewsPVRGuide.xml" />
+    <include file="IncludesPVR.xml" />
+    
+    
     <constant name="ScreenWidth">1280</constant>
     <constant name="ScreenHeight">720</constant>
     <constant name="FanartCrossfadeTime">500</constant>
@@ -131,7 +136,7 @@
                 <height>130</height>
                 <texturenofocus >home_2.png</texturenofocus>
                 <texturefocus border="5">home_2_p.png</texturefocus>
-                <onclick>ActivateWindow(Pictures)</onclick>
+                <onclick>ActivateWindow(tvchannels)</onclick>
             </control>
             <control type="image">
                 <description>Pictures Button Image</description>
