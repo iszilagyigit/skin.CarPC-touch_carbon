@@ -56,7 +56,34 @@
             </control>
         </control>
     </include>
-    
+ 
+    <include name="Time">
+     <control type="group">
+         <visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonTime)</visible>
+         <control type="button">
+             <!-- include>Window_OpenClose_Animation_Slide_Down</include -->
+             <description>time label</description>
+             <posx>400</posx>
+             <posy>0</posy>
+             <width>460</width>
+             <height>67</height>
+             <aligny>center</aligny>
+             <align>center</align>
+             <font>font50_title</font>
+             <!--textcolor>white</textcolor -->
+             <texturenofocus>special://skin/media/linie_alabstra.png</texturenofocus>
+             <texturefocus border="1">ceas.png</texturefocus>
+
+             <label>$INFO[System.Time] $INFO[System.Date(mmm dd)]</label>
+             <onclick>RunScript("special://skin/scripts/gpstime.py")</onclick>
+             <!--
+             <include>VisibleFadeEffect</include>
+             <include>16x9_xPos_Relocation</include>
+              -->
+         </control>
+     </control>	
+	</include>
+ 
     <include name="CommonTopBar">
         <control type="image">
             <include>Window_OpenClose_Animation_Slide_Down</include>
