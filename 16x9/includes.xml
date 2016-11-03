@@ -169,7 +169,7 @@
                 <height>130</height>
                 <texturenofocus >home_2.png</texturenofocus>
                 <texturefocus border="5">home_2_p.png</texturefocus>
-                <onclick>Quit()</onclick> <!-- RunScript("plugin.program.navigation") -->
+                <onclick>RunScript("plugin.program.navigation")</onclick> <!--Quit()  -->
             </control>
             <control type="image">
                 <description>Navit Button Image</description>
