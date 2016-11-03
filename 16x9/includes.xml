@@ -106,6 +106,52 @@
         </control>
     </include>
     
+    <!-- MAIN BUTTONS -->
+    
+    <!-- FIRST BUTTON LINKS -->
+    <include name="Video">
+      <control type="group" id="4200">
+        <include>Window_OpenClose_Animation_Zoom</include>
+        <posx>20</posx>
+        <posy>135</posy>
+        <control type="button" id="4201">
+            <ondown>Control.SetFocus(4211)</ondown>
+            <onup>Control.SetFocus(600)</onup>
+            <onleft>Control.SetFocus()</onleft>
+            <onright>Control.SetFocus(4251)</onright>
+            <description>Video Button</description>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>540</width>
+            <height>130</height>
+            <texturenofocus>home_1.png</texturenofocus>
+            <texturefocus border="5">home_1_p.png</texturefocus>
+            <onclick>ActivateWindow(Videos)</onclick>
+        </control>
+        
+        <control type="image">
+            <description>Video Button Image</description>
+            <posx>30</posx>
+            <posy>30</posy>
+            <width>80</width>
+            <height>80</height>
+            <texture>video2.png</texture>
+        </control>
+        <control type="label">
+            <description>Video label</description>
+            <posx>172</posx>
+            <posy>22</posy>
+            <height>90</height>
+            <width>200</width>
+            <label>Video</label>
+            <aligny>center</aligny>
+            <font>font40_title</font>
+            <textcolor>FFFFFFFF</textcolor>
+        </control>
+      </control>
+    </include>
+    
+    
     <include name="Navigation">
         <control type="group" id="4210">
             <visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonNavigation) + !Control.IsVisible(4220)</visible>
